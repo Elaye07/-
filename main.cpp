@@ -24,13 +24,40 @@
 
 #include "TXLib.h"
 
-int main()
-    {
-    txCreateWindow (800, 600);
+void drawFon()
+{
 
-    txSetColor (TX_LIGHTGREEN);
+    txSetColor (TX_BLUE);
+    txSetFillColor (TX_BLUE);
+    txRectangle (0, 0, 800, 600);
+
+    txSetColor (TX_GREEN);
     txSetFillColor (TX_GREEN);
-    txRectangle (600, 0, 800, 0);
+    txRectangle (0, 370, 800, 600);
+
+ }
+
+void drawSun()
+{
+ txSetColor (TX_BLACK);
+    txSetFillColor (TX_YELLOW);
+    txCircle (107, 75, 48);
+}
+
+void drawCloud()
+{
+txSetColor (TX_WHITE);
+    txSetFillColor (TX_WHITE);
+    txEllipse (511, 46, 720, 148);
+
+
+}
+
+void drawHouse()
+{
+    txSetColor (TX_BROWN);
+    txSetFillColor (TX_BROWN);
+    txRectangle (200, 100, 245, 213);
 
     txSetColor (TX_BLACK);
     txSetFillColor (TX_RED);
@@ -38,12 +65,48 @@ int main()
     POINT star[5] = {{323, 131}, {500, 215}, {145, 215}};
           txPolygon (star, 3);
 
+    txSetColor (TX_CYAN);
+    txSetFillColor (TX_CYAN);
+    txRectangle (202, 276, 335, 400);
+
+
+}
+
+int main()
+{
+    txCreateWindow (800, 600);
+
+    txSetColor (TX_BLUE);
+    txSetFillColor (TX_BLUE);
+    txRectangle (0, 0, 800, 600);
+
+    txSetColor (TX_GREEN);
+    txSetFillColor (TX_GREEN);
+    txRectangle (0, 370, 800, 600);
+
+
+    txSetColor (TX_BROWN);
+    txSetFillColor (TX_BROWN);
+    txRectangle (200, 100, 245, 213);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (TX_RED);
+    txRectangle (505, 445, 145, 215);
+    POINT star[5] = {{323, 131}, {500, 215}, {145, 215}};
+          txPolygon (star, 3);
+
+
+    txSetColor (TX_CYAN);
+    txSetFillColor (TX_CYAN);
+    txRectangle (202, 276, 335, 400);
+
     txSetColor (TX_BLACK);
     txSetFillColor (TX_YELLOW);
-    txCircle (171, 137, 45, 15, 105, 75)
+    txCircle (107, 75, 48);
 
-
-
+    txSetColor (TX_WHITE);
+    txSetFillColor (TX_WHITE);
+    txEllipse (511, 46, 720, 148);
 
 
 
