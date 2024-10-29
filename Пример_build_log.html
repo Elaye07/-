@@ -4,34 +4,53 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>24-10-2024 at 10:27.20</u><br />
-Build ended on: <u>24-10-2024 at 10:27.38</u><p />
+Build started on: <u>29-10-2024 at 10:23.45</u><br />
+Build ended on: <u>29-10-2024 at 10:23.49</u><p />
 <b>-------------- Build: Debug in Пример (compiler: NOT FOR PROJECTS! = MinGW GCC + Strict + Fast + Save (Requires Git))---------------</b><br />
 g++git-auto.bat "C:\Елаев Александр\Мультфильм\Пример\main.cpp" -o bin\Debug\Пример.exe -mwindows  -Wall -fexceptions  -g  -Wall -Wextra -Weffc++ -Wcast-align -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wfloat-equal -Wformat-security -Wformat=2 -Wignored-qualifiers -Winit-self -Winline -Wlogical-op -Wmain -Wmissing-declarations -Wno-missing-field-initializers -Wmissing-include-dirs -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wswitch-default -Wswitch-enum -Wtype-limits -Wundef -Wunreachable-code -Wwrite-strings -fexceptions -g -pipe -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
 ------------------------------------------------------------------------------------------------------<br />
 Compilation ERRORS:<br />
 <br />
-C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void drawFon()':<br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:27:6: warning: no previous declaration for 'void drawFon()' [-Wmissing-declarations]</font><br />
- void drawFon()<br />
+In file included from C:\Елаев Александр\Мультфильм\Пример\main.cpp:25:0:<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'int main()':<br />
+<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:43:6: error: expression cannot be used as a function</font><br />
+      txSelectFont ("Times New Roman", 60);<br />
       ^<br />
-C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void drawSun()':<br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:40:6: warning: no previous declaration for 'void drawSun()' [-Wmissing-declarations]</font><br />
- void drawSun()<br />
+<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:46:19: error: 'centerX' was not declared in this scope</font><br />
+      AppearText  (centerX, sizeY*4/5, "\"Hello, world!\\n\" :)",                                TX_BLACK,  TX_LIGHTGREEN, 5000, 100);<br />
+                   ^<br />
+<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:46:28: error: 'sizeY' was not declared in this scope</font><br />
+      AppearText  (centerX, sizeY*4/5, "\"Hello, world!\\n\" :)",                                TX_BLACK,  TX_LIGHTGREEN, 5000, 100);<br />
+                            ^<br />
+<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:46:132: error: 'AppearText' was not declared in this scope</font><br />
+      AppearText  (centerX, sizeY*4/5, "\"Hello, world!\\n\" :)",                                TX_BLACK,  TX_LIGHTGREEN, 5000, 100);<br />
+                                                                                                                                    ^<br />
+<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:47:28: error: 'centerY' was not declared in this scope</font><br />
+      AppearEarth (centerX, centerY, sizeX/2, sizeY/2,                                           TX_BLACK,  TX_LIGHTCYAN,  5000, 100);<br />
+                            ^<br />
+<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:47:37: error: 'sizeX' was not declared in this scope</font><br />
+      AppearEarth (centerX, centerY, sizeX/2, sizeY/2,                                           TX_BLACK,  TX_LIGHTCYAN,  5000, 100);<br />
+                                     ^<br />
+<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:47:132: error: 'AppearEarth' was not declared in this scope</font><br />
+      AppearEarth (centerX, centerY, sizeX/2, sizeY/2,                                           TX_BLACK,  TX_LIGHTCYAN,  5000, 100);<br />
+                                                                                                                                    ^<br />
+<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:57:20: error: 'DrawAppearText' was not declared in this scope</font><br />
+     DrawAppearText();<br />
+                    ^<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:39:9: warning: unused variable 'Cloud' [-Wunused-variable]</font><br />
+     int Cloud = 100<br />
+         ^<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void AppearText(int, int, const char*, COLORREF, COLORREF, int, int)':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:150:6: warning: no previous declaration for 'void AppearText(int, int, const char*, COLORREF, COLORREF, int, int)' [-Wmissing-declarations]</font><br />
+ void AppearText (int x, int y, const char* text, COLORREF from, COLORREF to,<br />
       ^<br />
-C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void drawCloud()':<br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:47:6: warning: no previous declaration for 'void drawCloud()' [-Wmissing-declarations]</font><br />
- void drawCloud()<br />
-      ^<br />
-C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void drawHouse()':<br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:56:6: warning: no previous declaration for 'void drawHouse()' [-Wmissing-declarations]</font><br />
- void drawHouse()<br />
-      ^<br />
+<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:169:11: error: 'kbget' was not declared in this scope</font><br />
+     kbget();<br />
+           ^<br />
 ------------------------------------------------------------------------------------------------------<br />
 Autosaving to the Git repository in C:/ ///.git-auto/... <br />
-Output size is 2,25 MB<br />
-<font color="#0000ff">Process terminated with status 0 (0 minutes, 18 seconds)</font><br />
-<font color="#0000ff">0 errors, 4 warnings (0 minutes, 18 seconds)</font><br />
+<font color="#a00000">Process terminated with status 1 (0 minutes, 3 seconds)</font><br />
+<font color="#a00000">9 errors, 2 warnings (0 minutes, 3 seconds)</font><br />
 </tt>
 </body>
 </html>

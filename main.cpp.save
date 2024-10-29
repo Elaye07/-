@@ -24,8 +24,44 @@
 
 #include "TXLib.h"
 
-void drawFon
-{
+void DrawFon();
+void DrawSun();
+void DrawCloud();
+void DrawHouse();
+void DrawMan();
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+int main()
+    {
+    txCreateWindow (800, 600);
+    
+    int Cloud = 100 
+    int
+    int
+    
+    
+
+    DrawFon();
+    DrawSun();
+    DrawCloud();
+    DrawHouse();
+    DrawMan();
+
+    txPlaySound ("tada.wav");                        // Windows <  7
+    txPlaySound ("C:\\Windows\\Media\\tada.wav");
+
+
+
+    txTextCursor (false);
+    return 0;
+
+    }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+void DrawFon()
+    {
 
     txSetColor (TX_BLUE);
     txSetFillColor (TX_BLUE);
@@ -35,40 +71,32 @@ void drawFon
     txSetFillColor (TX_GREEN);
     txRectangle (0, 370, 800, 600);
 
- }
+    }
 
-void drawSun
-{
- txSetColor (TX_BLACK);
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+void DrawSun()
+    {
+    txSetColor (TX_BLACK);
     txSetFillColor (TX_YELLOW);
     txCircle (107, 75, 48);
-}
+    }
 
-void drawCloud
-{
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+void DrawCloud()
+    {
 txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
     txEllipse (511, 46, 720, 148);
 
 
-}
+    }
 
-void drawHouse
+//-----------------------------------------------------------------------------------------------------------------------------------------
 
-
-int main()
+void DrawHouse()
     {
-    txCreateWindow (800, 600);
-
-    txSetColor (TX_BLUE);
-    txSetFillColor (TX_BLUE);
-    txRectangle (0, 0, 800, 600);
-
-    txSetColor (TX_GREEN);
-    txSetFillColor (TX_GREEN);
-    txRectangle (0, 370, 800, 600);
-
-
     txSetColor (TX_BROWN);
     txSetFillColor (TX_BROWN);
     txRectangle (200, 100, 245, 213);
@@ -79,24 +107,56 @@ int main()
     POINT star[5] = {{323, 131}, {500, 215}, {145, 215}};
           txPolygon (star, 3);
 
-
     txSetColor (TX_CYAN);
     txSetFillColor (TX_CYAN);
     txRectangle (202, 276, 335, 400);
 
-    txSetColor (TX_BLACK);
-    txSetFillColor (TX_YELLOW);
-    txCircle (107, 75, 48);
 
+    }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+void DrawMan()
+    {
     txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
-    txEllipse (511, 46, 720, 148);
+    txLine (595, 445, 555, 359);
+    txLine (555, 359, 503, 439);
+    txLine (555, 359, 555, 289);
+    txLine (555, 289, 515, 344);
+    txLine (555, 289, 600, 344);
+    txSetColor (TX_WHITE);
+    txSetFillColor (TX_WHITE);
+    txCircle (555, 265, 25);
 
 
 
 
 
-    txTextCursor (false);
-    return 0;
+
+
     }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+    //txPlaySound ("Выход из Windows.wav");
+    //txPlaySound ("C:\\Windows\\Media\\Выход из Windows.wav");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
