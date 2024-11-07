@@ -24,31 +24,50 @@
 
 #include "TXLib.h"
 
+
 void DrawFon();
 void DrawSun();
 void DrawCloud();
 void DrawHouse();
 void DrawMan();
+void DrawText(yText+50, "Пустота");
+void DrawFonText();
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
+
+int kbget();
+
+
 
 int main()
     {
     txCreateWindow (800, 600);
 
-    int Cloud = 100
-    //int
-    //int
+    int xSun = 100;
     int sizeX   = txGetExtentX(), sizeY   = txGetExtentY();
     int centerX = (sizeX+1)/2,    centerY = (sizeY+1)/2;
+    int yText = 650;
+
+    while(yText > - 20)
+    {
+      txBegin();
+      DrawText(yText+50, "Пустота");
+      DrawFonText();
+      txEnd();
+      yText -= 5;
+      txSleep(10);
+    }
 
 
 
-     txSelectFont ("Times New Roman", 60);
-     txSetTextAlign (TA_CENTER);
 
-     AppearText  (centerX, sizeY*4/5, "\"Hello, world!\\n\" :)",                                TX_BLACK,  TX_LIGHTGREEN, 5000, 100);
-     AppearEarth (centerX, centerY, sizeX/2, sizeY/2,                                           TX_BLACK,  TX_LIGHTCYAN,  5000, 100);
+    //int
+    //int
+
+
+
+
+
 
 
 
@@ -58,7 +77,8 @@ int main()
     DrawCloud();
     DrawHouse();
     DrawMan();
-    DrawAppearText();
+    DrawText(yText+50, "Пустота");
+
 
     txPlaySound ("tada.wav");                        // Windows <  7
     txPlaySound ("C:\\Windows\\Media\\tada.wav");
@@ -71,6 +91,42 @@ int main()
     }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
+
+void DrawText(yText+50, "Пустота")
+    {
+
+    txSetColor (TX_BLACK);
+    txSelectFont ("Comic Sans MS", 40);
+    txDrawText (0, 0, 800, 600, "И здесь могла бы быть Ваша реклама.");
+
+
+
+
+
+
+//    }
+//void MoveSun(int fromX, int fromY, int toX, int toY,
+            //  int sizeX, int sizeY, COLORREF color, COLORREF bkColor,
+            //  int time, int steps)
+  //  {       //
+    //txBegin();
+
+    //int Sun = 0;
+   // while (Sun <= steps)
+       // int x = fromX + (toX - fromX) * Sun/steps,
+          //  y = fromY + (toY - fromY) * Sun/steps;
+
+        //DrawSun (x, y - i%6, sizeX, sizeY, color,   i%3*0.02, i%3*-0.1, i%3*0.1, 0);
+
+        //txSleep (time / steps);
+
+       // DrawSun (x, y - i%6, sizeX, sizeY, bkColor, i%3*0.02, i%3*-0.1, i%3*0.1, 0);
+       // i++;
+
+       // DrawSun (toX, toY, sizeX, sizeY, color, 0, 0, 0);
+
+   // txEnd();
+    }
 
 void DrawFon()
     {
@@ -87,7 +143,7 @@ void DrawFon()
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 
-void DrawSun()
+void DrawSun(int x, int y, int sizeX, int sizeY)
     {
     txSetColor (TX_BLACK);
     txSetFillColor (TX_YELLOW);
@@ -103,7 +159,10 @@ txSetColor (TX_WHITE);
     txEllipse (511, 46, 720, 148);
 
 
-    }
+
+
+
+}
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -151,30 +210,33 @@ void DrawMan()
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 
-void AppearText (int x, int y, const char* text, COLORREF from, COLORREF to,
-                 int time, int steps)
+
+
+//----------------------------------------------------------------------------
+
+
+
+void DrawFonText()
     {
-    int r0 = txExtractColor (from, TX_RED),   r1 = txExtractColor (to, TX_RED),
-        g0 = txExtractColor (from, TX_GREEN), g1 = txExtractColor (to, TX_GREEN),
-        b0 = txExtractColor (from, TX_BLUE),  b1 = txExtractColor (to, TX_BLUE);
 
-    for (int i = 0; i <= steps && !_kbhit(); i++)
-        {
-        int r = r0 + (r1 - r0) * i/steps,
-            g = g0 + (g1 - g0) * i/steps,
-            b = b0 + (b1 - b0) * i/steps;
+    txSetColor (TX_WHITE);
+    txSetFillColor (TX_WHITE);
+    txRectangle (210, 445, 600, 600);
 
-        txSetColor (RGB (r, g, b));
-        txTextOut (x, y, text);
 
-        Sleep (time / steps);
-        }
-
-    kbget();
-
-    txSetColor (to);
-    txTextOut (x, y, text);
     }
+//----------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------
+
+int kbget()
+    {
+    int ch = 0;
+    while (_kbhit()) ch = _getch();
+    return ch;
+    }
+
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 
