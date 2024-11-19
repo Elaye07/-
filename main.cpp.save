@@ -12,143 +12,46 @@
 //! @par        Протестировано
 //!           - (TODO: список платформ)
 //!
-//! @todo     - (TODO: список ближайших планов по этому файлу)
+//! @todo     - (TODO:никаких)
 //!
-//! @bug      - (TODO: список найденных ошибок в этом файле)
+//! @bug      - (много)
 //!
 //! @par        История изменений файла
 //!           - Версия 0.01 Alpha
 //!             - Только что созданный файл
 //!
-//}=======================================================================
+//}=======================================================================                                                                                                                                                                                                                                                                        .
 
 #include "TXLib.h"
 
 
-void AppearText  (int x, int y, const char* text, COLORREF from, COLORREF to,
-                  int time, int steps);
+//void DrawFon();
+//void DrawSun();
+//void DrawCloud();
+//void DrawHouse();
+//void DrawMan();
+//void DrawText();
+//void DrawFonText();
+//void MoveSUN();
 
-void DrawHello   (int x, int y, const char* text, int size, COLORREF color);
-void MoveSun(int fromX, int fromY, int toX, int toY,
-              int sizeX, int sizeY, COLORREF color, COLORREF bkColor,
-              int time, int steps);
-void DrawFon();
-void DrawSun();
-void DrawCloud();
-void DrawHouse();
-void DrawMan();
-void DrawText(yText+50, "Пустота");
-void DrawFonText();
+//-----------------------------------------------------------------------------------------------------------------------------------------                                                                                                                                                                                                    .
 
-//-----------------------------------------------------------------------------------------------------------------------------------------
-
-int kbget();
-
-
-
-int main()
+void DrawText(int y)
     {
-    txCreateWindow (800, 600);
 
-    int xSun = 100;
-    int sizeX   = txGetExtentX(), sizeY   = txGetExtentY();
-    int centerX = (sizeX+1)/2,    centerY = (sizeY+1)/2;
-    int yText = 650;
-
-    while(yText > - 20)
-    {
-      txBegin();
-      DrawText(yText+50, "Пустота");
-      DrawFonText();
-      txEnd();
-      yText -= 5;
-      txSleep(10);
-    }
-    //while(Sun<=100)
-    //{
-      //txBegin();
-      //xSun +=30;
-      //txEnd();
-      //txSleep(10)
-    //}
-
-
-
-    //int
-    //int
-
-
-
-
-
-    txSelectFont ("Times New Roman", 60);
-    txSetTextAlign (TA_CENTER);
-
-
-
-    AppearText  (centerX, sizeY*2/5, "\"ПРИВЕТ, МИР!\\n\" ",                                TX_BLACK,  TX_CYAN, 5000, 100);
-
-
-
-    ///MoveSun(int fromX, int fromY, int toX, int toY,
-//              int sizeX, int sizeY, COLORREF color, COLORREF bkColor,
-//              int time, int steps);
-
-    DrawFon();
-    DrawSun();
-    DrawCloud();
-    DrawHouse();
-    DrawMan();
-    DrawText();
-
-
-    txPlaySound ("tada.wav");                        // Windows <  7
-    txPlaySound ("C:\\Windows\\Media\\tada.wav");
-
-
-
-    txTextCursor (false);
-    return 0;
-
-    }
-
-//-----------------------------------------------------------------------------------------------------------------------------------------
-
-void DrawText()
-    {
 
     txSetColor (TX_BLACK);
     txSelectFont ("Comic Sans MS", 40);
-    txDrawText (0, 0, 800, 600, "И здесь могла бы быть Ваша реклама.");
+    txDrawText (0, y, 800, y+100, "Мультик про деревню");
+    txDrawText (0, y, 800, y+150, "АоЭэааоаАэ");
+    txDrawText (0, y, 800, y+200, "Ураф");
+    txDrawText (0, y, 800, y+250, "АоЭэааоаАэ");
 
 
 
 
-
-
-//    }
-//void MoveSun(int fromX, int fromY, int toX, int toY,
-            //  int sizeX, int sizeY, COLORREF color, COLORREF bkColor,
-            //  int time, int steps)
-  //  {       //
-    //txBegin();
-
-    //int Sun = 0;
-   // while (Sun <= steps)
-       // int x = fromX + (toX - fromX) * Sun/steps,
-          //  y = fromY + (toY - fromY) * Sun/steps;
-
-        //DrawSun (x, y - i%6, sizeX, sizeY, color,   i%3*0.02, i%3*-0.1, i%3*0.1, 0);
-
-        //txSleep (time / steps);
-
-       // DrawSun (x, y - i%6, sizeX, sizeY, bkColor, i%3*0.02, i%3*-0.1, i%3*0.1, 0);
-       // i++;
-
-       // DrawSun (toX, toY, sizeX, sizeY, color, 0, 0, 0);
-
-   // txEnd();
     }
+//-----------------------------------------------------------------------------------------------------------------------------------------                                                                                                                                                                                                    .
 
 void DrawFon()
     {
@@ -162,31 +65,28 @@ void DrawFon()
     txRectangle (0, 370, 800, 600);
 
     }
+//-----------------------------------------------------------------------------------------------------------------------------------------                                                                                                                                                                                                    .
 
-//-----------------------------------------------------------------------------------------------------------------------------------------
-
-void DrawSun(int x, int y, int sizeX, int sizeY)
+void DrawSun(int x)
     {
     txSetColor (TX_BLACK);
     txSetFillColor (TX_YELLOW);
-    txCircle (107, 75, 48);
+    txCircle (x, 75, 48);
     }
+//-----------------------------------------------------------------------------------------------------------------------------------------                                                                                                                                                                                                     .
 
-//-----------------------------------------------------------------------------------------------------------------------------------------
-
-void DrawCloud()
+void DrawCloud(int x)
     {
 txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
-    txEllipse (511, 46, 720, 148);
-
+    txEllipse (x+562, 46, x+766, 148);
+//766
 
 
 
 
 }
-
-//-----------------------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------------                                                                                                                                                                                                      .
 
 void DrawHouse()
     {
@@ -206,8 +106,7 @@ void DrawHouse()
 
 
     }
-
-//-----------------------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------------                                                                                                                                                                                                       .
 
 void DrawMan()
     {
@@ -229,79 +128,84 @@ void DrawMan()
 
 
     }
-
-//-----------------------------------------------------------------------------------------------------------------------------------------
-
-void AppearText (int x, int y, const char* text, COLORREF from, COLORREF to,
-                 int time, int steps)
-    {
-    int r0 = txExtractColor (from, TX_RED),   r1 = txExtractColor (to, TX_RED),
-        g0 = txExtractColor (from, TX_GREEN), g1 = txExtractColor (to, TX_GREEN),
-        b0 = txExtractColor (from, TX_BLUE),  b1 = txExtractColor (to, TX_BLUE);
-
-    for (int i = 0; i <= steps && !_kbhit(); i++)
-        {
-        int r = r0 + (r1 - r0) * i/steps,
-            g = g0 + (g1 - g0) * i/steps,
-            b = b0 + (b1 - b0) * i/steps;
-
-        txSetColor (RGB (r, g, b));
-        txTextOut (x, y, text);
-
-        Sleep (time / steps);
-        }
-
-    kbget();
-
-    txSetColor (to);
-    txTextOut (x, y, text);
-    }
-
-//----------------------------------------------------------------------------
-
-void DrawHello (int x, int y, const char* text, int size, COLORREF color)
-    {
-    txSetColor (color);
-
-    txSelectFont ("Times New Roman", size);
-    txSetTextAlign (TA_CENTER);
-
-    txTextOut (x, y, text);
-    }
+//-----------------------------------------------------------------------------------------------------------------------------------------                                                                                                                                                                                                        .
 
 void DrawFonText()
     {
 
     txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
-    txRectangle (210, 445, 600, 600);
+    txRectangle (0, 0, 800, 600);
 
 
     }
-//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------                                                                                                                                                                                                                                                                       .
 
-
-//----------------------------------------------------------------------------
-
-int kbget()
+int main()
     {
-    int ch = 0;
-    while (_kbhit()) ch = _getch();
-    return ch;
+    txCreateWindow (800, 600);
+
+    int xSun = 100;
+    int yText = 500;
+    int xCloud = 300;
+    int BAZAR = 500;
+
+    while(yText > - 200)
+    {
+      txBegin();
+      DrawFonText();
+      DrawText(yText + 50);
+      txEnd();
+      yText -= 5;
+      txSleep(10);
     }
 
 
-//-----------------------------------------------------------------------------------------------------------------------------------------
 
 
 
-//-----------------------------------------------------------------------------------------------------------------------------------------
 
 
-    //txPlaySound ("Выход из Windows.wav");
-    //txPlaySound ("C:\\Windows\\Media\\Выход из Windows.wav");
+    while(xSun<1000)
+    {
+      txBegin();
+      DrawFon();
+      DrawSun(xSun);
+      DrawCloud(xCloud);
+      DrawHouse();
+      DrawMan();
+      txEnd();
+      xSun += 3;
+      xCloud -= 2;
+      xCloud -= 2;
+      txSleep(5);
+
+    }
 
 
+     if(BAZAR<1000)
+    {
+const char* name = txInputBox ("Чудесная сегодня погода, не так ли?", "System", "Да, сер!");
+txMessageBox ("Полностью с тобой согласен!");
+BAZAR += 1000;
+
+    }
+
+    while(BAZAR>1000)
+    
+
+    }
+
+    txPlaySound ("tada.wav");
+    txPlaySound ("C:\\Windows\\Media\\tada.wav");
+
+
+
+    txTextCursor (false);
+    return 0;
+
+    }
+//-----------------------------------------------------------------------------------------------------------------------------------------                                                                                                                                                                                                  .   LOL
 
 
 

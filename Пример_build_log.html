@@ -4,69 +4,57 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>07-11-2024 at 10:18.30</u><br />
-Build ended on: <u>07-11-2024 at 10:18.34</u><p />
+Build started on: <u>19-11-2024 at 11:02.48</u><br />
+Build ended on: <u>19-11-2024 at 11:03.05</u><p />
 <b>-------------- Build: Debug in Пример (compiler: NOT FOR PROJECTS! = MinGW GCC + Strict + Fast + Save (Requires Git))---------------</b><br />
-g++git-auto.bat "C:\Елаев Александр\Мультфильм\Пример\main.cpp" -o bin\Debug\Пример.exe -mwindows  -Wall -fexceptions  -g  -Wall -Wextra -Weffc++ -Wcast-align -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wfloat-equal -Wformat-security -Wformat=2 -Wignored-qualifiers -Winit-self -Winline -Wlogical-op -Wmain -Wmissing-declarations -Wno-missing-field-initializers -Wmissing-include-dirs -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wswitch-default -Wswitch-enum -Wtype-limits -Wundef -Wunreachable-code -Wwrite-strings -fexceptions -g -pipe -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
+g++git-auto.bat "C:\Елаев Александр\Мультфильм\Пример\main.cpp" -o bin\Debug\Пример.exe -mwindows  -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wno-missing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -fexceptions -pipe -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
 ------------------------------------------------------------------------------------------------------<br />
 Compilation ERRORS:<br />
 <br />
-<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:33:15: error: variable or field 'DrawTextA' declared void</font><br />
- void DrawText(yText+50, "Пустота");<br />
-               ^<br />
-<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:33:15: error: 'yText' was not declared in this scope</font><br />
-C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'int main()':<br />
-<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:54:21: error: invalid conversion from 'int' to 'HDC' [-fpermissive]</font><br />
-       DrawText(yText+50, "Пустота");<br />
-                     ^<br />
-<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:54:35: error: too few arguments to function 'int DrawTextA(HDC, LPCSTR, int, LPRECT, UINT)'</font><br />
-       DrawText(yText+50, "Пустота");<br />
-                                   ^<br />
-In file included from c:\codeblocks\codeblocks\mingw\include\windows.h:55:0,<br />
-                 from c:\codeblocks\codeblocks\mingw\include\txlib.h:898,<br />
-                 from C:\Елаев Александр\Мультфильм\Пример\main.cpp:25:<br />
-c:\codeblocks\codeblocks\mingw\include\winuser.h:3616:23: note: declared here<br />
- WINUSERAPI int WINAPI DrawTextA(HDC,LPCSTR,int,LPRECT,UINT);<br />
-                       ^<br />
-<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:80:19: error: invalid conversion from 'int' to 'HDC' [-fpermissive]</font><br />
-     DrawText(yText+50, "Пустота");<br />
-                   ^<br />
-<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:80:33: error: too few arguments to function 'int DrawTextA(HDC, LPCSTR, int, LPRECT, UINT)'</font><br />
-     DrawText(yText+50, "Пустота");<br />
-                                 ^<br />
-In file included from c:\codeblocks\codeblocks\mingw\include\windows.h:55:0,<br />
-                 from c:\codeblocks\codeblocks\mingw\include\txlib.h:898,<br />
-                 from C:\Елаев Александр\Мультфильм\Пример\main.cpp:25:<br />
-c:\codeblocks\codeblocks\mingw\include\winuser.h:3616:23: note: declared here<br />
- WINUSERAPI int WINAPI DrawTextA(HDC,LPCSTR,int,LPRECT,UINT);<br />
-                       ^<br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:46:9: warning: unused variable 'xSun' [-Wunused-variable]</font><br />
-     int xSun = 100;<br />
-         ^<br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:48:9: warning: unused variable 'centerX' [-Wunused-variable]</font><br />
-     int centerX = (sizeX+1)/2,    centerY = (sizeY+1)/2;<br />
-         ^<br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:48:35: warning: unused variable 'centerY' [-Wunused-variable]</font><br />
-     int centerX = (sizeX+1)/2,    centerY = (sizeY+1)/2;<br />
-                                   ^<br />
-C:\Елаев Александр\Мультфильм\Пример\main.cpp: At global scope:<br />
-<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:95:15: error: variable or field 'DrawTextA' declared void</font><br />
- void DrawText(yText+50, "Пустота")<br />
-               ^<br />
-<font color="#ff0000">C:\Елаев Александр\Мультфильм\Пример\main.cpp:95:15: error: 'yText' was not declared in this scope</font><br />
-C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void DrawSun(int, int, int, int)':<br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:146:6: warning: no previous declaration for 'void DrawSun(int, int, int, int)' [-Wmissing-declarations]</font><br />
- void DrawSun(int x, int y, int sizeX, int sizeY)<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void DrawTEXT(int)':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:37:6: warning: no previous declaration for 'void DrawTEXT(int)' [-Wmissing-declarations]</font><br />
+ void DrawTEXT(int y)<br />
       ^<br />
-C:\Елаев Александр\Мультфильм\Пример\main.cpp: At global scope:<br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:146:6: warning: unused parameter 'x' [-Wunused-parameter]</font><br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:146:6: warning: unused parameter 'y' [-Wunused-parameter]</font><br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:146:6: warning: unused parameter 'sizeX' [-Wunused-parameter]</font><br />
-<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:146:6: warning: unused parameter 'sizeY' [-Wunused-parameter]</font><br />
+In file included from c:\codeblocks\codeblocks\mingw\include\windows.h:55:0,<br />
+                 from c:\codeblocks\codeblocks\mingw\include\txlib.h:898,<br />
+                 from C:\Елаев Александр\Мультфильм\Пример\main.cpp:25:<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void DrawTextA(int)':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:57:6: warning: no previous declaration for 'void DrawTextA(int)' [-Wmissing-declarations]</font><br />
+ void DrawText(int y)<br />
+      ^<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void DrawFon()':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:74:6: warning: no previous declaration for 'void DrawFon()' [-Wmissing-declarations]</font><br />
+ void DrawFon()<br />
+      ^<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void DrawSun(int)':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:88:6: warning: no previous declaration for 'void DrawSun(int)' [-Wmissing-declarations]</font><br />
+ void DrawSun(int x)<br />
+      ^<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void DrawCloud(int)':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:96:6: warning: no previous declaration for 'void DrawCloud(int)' [-Wmissing-declarations]</font><br />
+ void DrawCloud(int x)<br />
+      ^<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void DrawHouse()':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:109:6: warning: no previous declaration for 'void DrawHouse()' [-Wmissing-declarations]</font><br />
+ void DrawHouse()<br />
+      ^<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void DrawMan()':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:129:6: warning: no previous declaration for 'void DrawMan()' [-Wmissing-declarations]</font><br />
+ void DrawMan()<br />
+      ^<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'void DrawFonText()':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:151:6: warning: no previous declaration for 'void DrawFonText()' [-Wmissing-declarations]</font><br />
+ void DrawFonText()<br />
+      ^<br />
+C:\Елаев Александр\Мультфильм\Пример\main.cpp: In function 'int main()':<br />
+<font color="#0000ff">C:\Елаев Александр\Мультфильм\Пример\main.cpp:199:13: warning: unused variable 'name' [-Wunused-variable]</font><br />
+ const char* name = txInputBox ("Чудесная сегодня погода, не так ли?", "System", "Да, сер!");<br />
+             ^<br />
 ------------------------------------------------------------------------------------------------------<br />
 Autosaving to the Git repository in C:/ ///.git-auto/... <br />
-<font color="#a00000">Process terminated with status 1 (0 minutes, 3 seconds)</font><br />
-<font color="#a00000">8 errors, 8 warnings (0 minutes, 3 seconds)</font><br />
+Output size is 2,25 MB<br />
+<font color="#0000ff">Process terminated with status 0 (0 minutes, 17 seconds)</font><br />
+<font color="#0000ff">0 errors, 9 warnings (0 minutes, 17 seconds)</font><br />
 </tt>
 </body>
 </html>
